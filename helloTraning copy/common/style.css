@@ -1,0 +1,112 @@
+@charset "utf-8";
+
+body{
+	color: #333;
+	background: #faf7f1;
+	font-size: 100%;
+	font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+	line-height: 1.7;
+	letter-spacing: 0.05em;
+}
+
+img{
+	vertical-align: bottom;
+}
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1vw;
+}
+
+.headerArea{
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+.headerTop {
+	display: flex;
+	align-items: center;
+}
+
+.headerTop h1 {
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝B", serif;
+	font-size: 2rem;
+}
+
+.header_nav ul {
+	display: flex;
+	justify-content: center;
+}
+
+.header_nav ul li {
+	text-align: center;
+	padding: 0 1em;
+}
+
+.header_nav ul li a{
+	display: block;
+}
+
+nav a :hover {
+	background: #fff;
+	transition: 0.5s;
+}
+
+.mv{
+	width: 1366px;
+	margin: 0 auto;
+	display: block;
+	position: relative;
+}
+
+.mv img{
+	width: 100%;
+}
+
+.mv p{
+	font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝B", serif;
+	font-size: 3.75rem;
+	position: absolute;
+	top: 35%;
+	left: 10%;
+}
+
+#about{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 5vw;
+}
+
+#info{
+	background: #ffe7b9;
+	border-radius: 20px;
+	margin-top: 5vw;
+}
+
+section h2{
+	font-size: 2.25rem;
+	font-weight: 700;
+	text-align: center;
+	padding: 1em 0 0.5em;
+}
+
+.about p{
+	width: 25vw;
+	margin: 0 auto;
+	font-size: 1.125rem;
+}

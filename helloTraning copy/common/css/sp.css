@@ -1,0 +1,321 @@
+@charset "utf-8";
+/*@media screen and (max-width: 959px) {
+  * {
+    box-sizing: border-box;
+  }
+  #hdrArea {
+    padding: 0 2vw;
+  }
+  #wrapper {
+    padding: 0 2vw;
+  }
+  #wrapper #topicPath {
+    float: none;
+    margin-left: 0;
+    width: 100%;
+  }
+  #sideContents {
+    float: none;
+    margin: 2vw auto;
+    width: 50%;
+  }
+  #wrapper #mainContents {
+    float: none;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2vw 0
+  }
+  .topLink {
+    float: none;
+  }
+}*/
+@media screen and (max-width: 480px) {
+  
+	.headerArea {
+    flex-direction: column;
+    position: static;
+  }
+  .headerTop {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+	
+	.header_nav ul {
+    margin: 2rem 0;
+}
+	
+	nav a:hover:before{
+	border: none;
+}
+	
+	.mv{
+		width: 100%
+	}
+	
+	.mv p {
+    font-size: 3.2rem;
+    top: 40%;
+    left: 5%;
+		opacity: 0.85;
+}
+	
+	.container {
+    padding: 0;
+}
+	
+  .about p {
+    width: 90%;
+    opacity: 0.85;
+  }
+  #about .point {
+    flex-direction: column;
+    gap: 2.4rem 0;
+  }
+  #about .card {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .traning p {
+    width: 90%;
+    opacity: 0.85;
+  }
+  .info dl {
+    width: 100%;
+  }
+  .info dt {
+    padding: 0.5em;
+  }
+  .info dd {
+    padding: 0.5em;
+  }
+	
+	.link:hover:before{
+	border: none;
+}
+
+	
+  .link {
+    width: 96%;
+  }
+  .curriculum dl {
+    width: 100%;
+  }
+  .curriculum dt {
+    padding: 0.5em;
+  }
+  .curriculum dd {
+    padding: 0.5em;
+  }
+	
+	#curriculum {
+    padding-bottom: 0;
+}
+	
+  #works .works {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #works .card {
+    width: 95%;
+    flex-direction: column;
+    gap: 2.8rem;
+  }
+  #works .detail {
+    width: 100%;
+  }
+  #works .title {
+    width: 100%;
+  }
+	
+	.picture {
+    padding-bottom: 0;
+}
+	
+		#works {
+    padding-bottom: 0;
+}
+	
+  .overview dl {
+    width: 100%;
+  }
+	
+	.overview dl:last-child{
+		margin-bottom: 0;
+	}
+	
+  .overview dt {
+    padding: 0.5em;
+  }
+  .overview dd {
+    padding: 0.5em;
+  }
+	
+		#overview {
+    padding-bottom: 0;
+}
+	
+	/* Google Mapを囲う要素 */
+.map {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 75%; /* 比率を4:3に固定 */
+}
+
+/* Google Mapのiframe */
+.map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+	
+	
+	.inputM {
+    width: 100%;
+}
+	
+	.inputL {
+    width: 100%;
+}
+	
+		.inputLL {
+    width: 100%;
+}
+	
+  /* ----------------------- */
+  /* base_sp
+/* ----------------------- */
+  /* デフォルトのbuttonスタイルをリセット */
+  #hdrArea {
+    position: relative;
+  }
+  #hdrArea button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: 0;
+    border-radius: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    margin: 0;
+    outline: none;
+    padding: 0;
+    vertical-align: middle;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  /* 以下、ハンバーガーボタン */
+  .burger-btn {
+    display: block;
+    width: 100%;
+    height: 39px;
+    position: relative;
+    z-index: 3;
+    border: none;
+  }
+  .bar {
+    width: 20px;
+    height: 1px;
+    display: block;
+    position: absolute;
+    right: 0;
+    transform: translateX(-50%);
+    background-color: #333;
+  }
+  .bar_top {
+    top: 10px;
+  }
+  .bar_mid {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .bar_bottom {
+    bottom: 10px;
+  }
+  .burger-btn.close .bar_top {
+    transform: translate(-50%, 10px) rotate(45deg);
+    transition: transform .3s;
+  }
+  .burger-btn.close .bar_mid {
+    opacity: 0;
+    transition: opacity .3s;
+  }
+  .burger-btn.close .bar_bottom {
+    transform: translate(-50%, -8px) rotate(-45deg);
+    transition: transform .3s;
+  }
+  /* 以下、ハンバーガーメニュー */
+  .nav-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all .5s;
+    z-index: 2;
+  }
+  .header-nav {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.9;
+    z-index: 2;
+  }
+  .nav-list {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .nav-item {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+  #hdrArea nav {
+    width: 100%;
+    height: 100vh;
+    float: none;
+  }
+  #hdrArea nav ul {
+    margin: 0;
+  }
+  #hdrArea nav ul li {
+    width: 100%;
+    height: 100%;
+    float: none;
+  }
+  /* メニューオープン時 */
+  .nav-wrapper.fade {
+    visibility: visible;
+    opacity: 1;
+  }
+  .noscroll {
+    overflow: hidden;
+  }
+  #sideContents {
+    width: 100%;
+  }
+  .topLink {
+    margin-left: 0;
+    text-align: center;
+  }
+  .topLink p {
+    width: 100%;
+    height: auto;
+    padding: 14px 0;
+    text-align: left;
+  }
+}

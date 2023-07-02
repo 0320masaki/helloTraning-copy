@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>WEBサイト制作科 | 応募フォーム</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link href="../common/css/base.css" rel="stylesheet" type="text/css">
+<link href="../common/css/style.css" rel="stylesheet" type="text/css">
+	<link href="../common/css/sp.css" rel="stylesheet" type="text/css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+
+<body>
+<header id="top">
+  <div class="headerArea"> <a href="../index.html">
+    <div class="headerTop">
+      <p><img src="../common/images/logo.png" width="61" height="61" alt="ハロートレーニング"/></p>
+      <h1>WEBサイト制作科</h1>
+    </div>
+    <!--headerTop--> 
+    </a>
+    <nav class="header_nav">
+      <ul>
+        <li><a href="../index.html">TOP</a></li>
+        <li><a href="../works/index.html">講座内容・制作物</a></li>
+        <li><a href="../form/index.html">申し込み</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!--headerArea--> 
+</header>
+<main class="container">
+  <section id="form">
+    <h2>応募申し込み</h2>
+    <form action="../common/php/mail.php" method="post" class="form h-adr">
+      <div class="formItem">
+        <dl>
+          <dt>お名前<span class="str">必須</span></dt>
+          <dd>
+            <ul>
+              <li>
+                <input type="text" name="お名前" value="" class="inputM" placeholder="例 : 山田　太郎">
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl id="tblZip" class="tblZip">
+          <dt>郵便番号<span class="str">必須</span></dt>
+          <dd class="linedParent"> <span class="p-country-name" style="display:none;">Japan</span>
+            <input id="zipCodeNum" data-is-permit-hyphen="true" type="number" name="郵便番号" value="" class="inputM num p-postal-code" maxlength="8" placeholder="例 : 2617116 ハイフンなし" autocomplete="postal-code">
+            <a href="http://www.post.japanpost.jp/zipcode/index.html" class="ico_blank" target="_blank">郵便番号を調べる</a></dd>
+        </dl>
+        <dl class="tblArea">
+          <dt>都道府県<span class="str"></span></dt>
+          <dd>
+            <input type="text" name="都道府県" class="inputL p-region" placeholder="郵便番号を入力して下さい" value="">
+          </dd>
+        </dl>
+        <dl class="tblAddress1">
+          <dt>住所1<span class="str">必須</span></dt>
+          <dd>
+            <input id="prefName" type="text" name="市区町村" value="" class="inputMAX p-locality p-street-address p-extended-address" maxlength="100" placeholder="市区町村、番地など" autocomplete="address-level4">
+          </dd>
+        </dl>
+        <dl id="tblAddress2">
+          <dt>住所2</dt>
+          <dd>
+            <input type="text" name="建物名" value="" class="inputMAX" maxlength="100" placeholder="建物名など（任意）" autocomplete="address-line2">
+          </dd>
+        </dl>
+        <dl id="sectelForm" class="tblTel1 ">
+          <dt>電話番号<span class="str">必須</span></dt>
+          <dd class="listParent telForm">
+            <ul class=" list plural">
+              <li>
+                <input type="tel" name="電話番号" value="" class="inputL num del" maxlength="15" placeholder="例 ：09012345678 ハイフンなし" autocomplete="tel">
+              </li>
+            </ul>
+          </dd>
+        </dl>
+        <dl >
+          <dt>メールアドレス<span class="str">必須</span></dt>
+          <dd>
+            <input type="email" name="メールアドレス" value="" class="inputLL en" maxlength="100" placeholder="example@co.jp" autocomplete="email" data-email-input-form="">
+          </dd>
+        </dl>
+        <dl >
+          <dt>WEBサイト制作科をどこで知りましたか？</dt>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="ハローワーク">ハローワーク</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="知人の紹介">知人の紹介</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="インターネット">インターネット</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="チラシ">チラシ</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="広報誌">広報誌</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="ラジオ">ラジオ</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="有線">有線</label></dd>
+			<dd><label><input type="radio" name="WEBサイト制作科をどこで知りましたか？" value="その他">その他</label></dd>
+        </dl>
+        <!-- /#registAddress --></div>
+      <div class="goForm">
+		  <button type="submit" class="btn btn--orange" name="" id="submit" value="送信する">ボタンを押して送信する</button>
+      </div>
+    </form>
+  </section>
+</main>
+<footer>
+  <div class="footerLogo"><a href="../index.html"><img src="../common/images/logo.png" width="300" height="300" alt="foterLogo"/></a></div>
+  <p><small>@copy</small></p>
+</footer>
+<script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+	<script type="text/javascript">
+		$(function () {
+			var radio_val;
+  $('input[type="radio"]').on('click',function(){
+	if($(this).val() == radio_val) {
+		$(this).prop('checked', false);
+		radio_val = null;
+	} else {
+		radio_val = $(this).val();
+	}
+});
+});
+
+  </script>
+</body>
+</html>
